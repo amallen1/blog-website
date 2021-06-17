@@ -1,15 +1,17 @@
 //Variables
 
-//Styling
+// -- Styling
 $sidepanel-clr: #ebebeb;
 $nav-clr: #f8f8f8;
 $darkgray-clr: #707070;
 $white: #ffffff;
 
-//Typography colors
+// -- Typography colors
 $heading-clr: #143774;
 $subheading-clr: #1792d2;
 $navlinks-clr: #717171;
+
+// -- General styling
 
 * {
   margin: 0;
@@ -17,7 +19,6 @@ $navlinks-clr: #717171;
   box-sizing: border-box;
 }
 
-//general styling
 body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
@@ -72,6 +73,17 @@ h1 {
   letter-spacing: 0.1em;
 }
 
+.article-body {
+  font-size: 1.2em;
+}
+
+.article-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
 // -- Layout
 
 .container {
@@ -106,22 +118,113 @@ h1 {
   }
 }
 
-// -- Featured article
-
-.featured-article,
-.recent-article {
-  display: flex;
-  flex-direction: column;
-
-  .article-img {
-    order: -2;
-    margin-bottom: 1em;
-  }
-}
-
 .curr-page {
   border-bottom: 1px solid $navlinks-clr;
 }
+
+// -- Featured article
+
+.featured-article {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  margin-bottom: 3em;
+
+  .article-img {
+    order: -2;
+  }
+
+  .article-date {
+    order: -1;
+    margin: 2em 0 1.5em 0;
+  }
+
+  .article-title {
+    margin-bottom: 1em;
+  }
+
+  .article-link {
+    margin: 1.5em 0;
+  }
+}
+
+//recent blog posts
+.recent-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-recent-article {
+    order: -2;
+    margin-top: -1.2em;
+
+    .article-title {
+        
+    }
+
+    .article-body {
+        margin: 1.5em 0;
+        line-height: 1.5;
+    }
+
+
+}
+
+.secondary-recent-article {
+    order: -3;
+    
+
+    .article-img {
+        margin-bottom: 1em;
+    }
+    .article-date {
+        text-align: right;
+    }
+
+    
+    
+}
+
+// .featured-article {
+//     border-bottom: 1px solid black;
+//     margin-bottom: 2.5em;
+
+//     .article-img {
+//         margin-bottom: 1.5em;
+//     }
+
+//     .article-date {
+//         margin-bottom: 1em;
+//     }
+
+//     .article-body {
+//         margin-bottom: 1em;
+//     }
+
+//     .article-link {
+//         margin-bottom: 1em;
+
+//     }
+
+// }
+
+// .featured-article,
+// .recent-article {
+//   display: flex;
+//   flex-direction: column;
+
+//   .article-title {
+//       margin-bottom: 1em;
+//   }
+
+//   .article-img {
+//     order: -3;
+//   }
+
+//   .article-date {
+//       order: -2;
+//   }
+// }
 
 @media (max-width: 675px) {
   .flex-container {
