@@ -37,7 +37,7 @@ a {
 }
 
 img {
-  max-width: 500px;
+  max-width: 100%;
 }
 
 // -- Typography styling
@@ -73,8 +73,13 @@ h1 {
   letter-spacing: 0.1em;
 }
 
+.article-date {
+  font-size: .875rem;
+}
+
 .article-body {
-  font-size: 1.2em;
+  font-size: 1.125em;
+  line-height: 1.75;
 }
 
 .article-link {
@@ -122,7 +127,7 @@ h1 {
   border-bottom: 1px solid $navlinks-clr;
 }
 
-// -- Featured article
+//-- Featured article
 
 .featured-article {
   display: flex;
@@ -140,7 +145,7 @@ h1 {
   }
 
   .article-title {
-    margin-bottom: 1em;
+    margin-bottom: .75em;
   }
 
   .article-link {
@@ -150,81 +155,36 @@ h1 {
 
 //recent blog posts
 .recent-article {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-recent-article {
-    order: -2;
-    margin-top: -1.2em;
+  order: -2;
+  //margin-top: -1.5em;
 
-    .article-title {
-        
-    }
+  .article-body {
+    margin: 1.5em 0;
+  }
 
-    .article-body {
-        margin: 1.5em 0;
-        line-height: 1.5;
-    }
-
-
+  .article-link {
+    display: inline-block;
+    margin-bottom: 4.5em;
+  }
 }
 
 .secondary-recent-article {
-    order: -3;
-    
+  order: -3;
 
-    .article-img {
-        margin-bottom: 1em;
-    }
-    .article-date {
-        text-align: right;
-    }
+  .article-img {
+    margin-bottom: 1em;
+  }
+  .article-date {
+    text-align: right;
+  }
 
-    
-    
+
 }
-
-// .featured-article {
-//     border-bottom: 1px solid black;
-//     margin-bottom: 2.5em;
-
-//     .article-img {
-//         margin-bottom: 1.5em;
-//     }
-
-//     .article-date {
-//         margin-bottom: 1em;
-//     }
-
-//     .article-body {
-//         margin-bottom: 1em;
-//     }
-
-//     .article-link {
-//         margin-bottom: 1em;
-
-//     }
-
-// }
-
-// .featured-article,
-// .recent-article {
-//   display: flex;
-//   flex-direction: column;
-
-//   .article-title {
-//       margin-bottom: 1em;
-//   }
-
-//   .article-img {
-//     order: -3;
-//   }
-
-//   .article-date {
-//       order: -2;
-//   }
-// }
 
 @media (max-width: 675px) {
   .flex-container {
