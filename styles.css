@@ -136,6 +136,18 @@ h1 {
   border-bottom: 1px solid #717171;
 }
 
+@media (max-width: 675px) {
+  .navlinks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navlinks li {
+    margin: 0.5em 0;
+  }
+}
+
 /* ARTICLE SECTION */
 .featured-article {
   display: -webkit-box;
@@ -208,18 +220,35 @@ h1 {
 .about-me,
 .recent-posts {
   border: 20px solid #ebebeb;
+  padding: 1em;
   margin-bottom: 100px;
 }
 
-@media (max-width: 675px) {
-  .navlinks {
-    -webkit-box-orient: vertical;
+@media (min-width: 675px) {
+  .recent-article {
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .navlinks li {
-    margin: 0.5em 0;
+  .main-recent-article {
+    width: 68%;
+  }
+  .secondary-recent-article {
+    width: 30%;
+  }
+  .article-img {
+    width: 100%;
+    min-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  article:last-child .article-img {
+    -o-object-position: left;
+       object-position: left;
   }
 }
 /*# sourceMappingURL=styles.css.map */

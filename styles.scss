@@ -145,6 +145,18 @@ h1 {
   border-bottom: 1px solid $navlinks-clr;
 }
 
+// -- Media query for nav
+
+@media (max-width: 675px) {
+  .navlinks {
+    flex-direction: column;
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+}
+
 /* ARTICLE SECTION */
 
 //-- Featured article
@@ -200,19 +212,38 @@ h1 {
   }
 }
 
-//sidepanel
+// -- sidepanel
 .about-me,
 .recent-posts {
   border: 20px solid $sidepanel-clr;
+  padding: 1em;
   margin-bottom: 100px;
 }
 
-@media (max-width: 675px) {
-  .navlinks {
-    flex-direction: column;
+@media (min-width: 675px) {
+  .recent-article {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    li {
-      margin: 0.5em 0;
+  .main-recent-article {
+    width: 68%;
+  }
+
+  .secondary-recent-article {
+    width: 30%;
+  }
+
+  .article-img {
+    width: 100%;
+    min-height: 250px;
+    object-fit: cover;
+  }
+
+  // -- targets the very last img in the last article tag
+  article {
+    &:last-child .article-img {
+      object-position: left;
     }
   }
 }
