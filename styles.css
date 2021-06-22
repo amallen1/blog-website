@@ -24,6 +24,7 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 h1 {
@@ -57,8 +58,9 @@ h1 {
   letter-spacing: 0.1em;
 }
 
-.article-date {
-  font-size: .875rem;
+.article-date,
+.article-link {
+  font-size: 0.875rem;
 }
 
 .article-body {
@@ -83,12 +85,28 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media (min-width: 675px) {
+  .flex-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main {
+    width: 75%;
+  }
+  aside {
+    width: 20%;
+  }
 }
 
 .navlinks {
@@ -118,6 +136,7 @@ h1 {
   border-bottom: 1px solid #717171;
 }
 
+/* ARTICLE SECTION */
 .featured-article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +163,7 @@ h1 {
 }
 
 .featured-article .article-title {
-  margin-bottom: .75em;
+  margin-bottom: 0.75em;
 }
 
 .featured-article .article-link {
@@ -159,44 +178,40 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 3em;
 }
 
-.main-recent-article {
+.recent-article .main-recent-article {
   -webkit-box-ordinal-group: -1;
       -ms-flex-order: -2;
           order: -2;
 }
 
-.main-recent-article .article-body {
+.recent-article .main-recent-article .article-body {
   margin: 1.5em 0;
 }
 
-.main-recent-article .article-link {
-  display: inline-block;
-  margin-bottom: 4.5em;
-}
-
-.secondary-recent-article {
+.recent-article .secondary-recent-article {
   -webkit-box-ordinal-group: -2;
       -ms-flex-order: -3;
           order: -3;
 }
 
-.secondary-recent-article .article-img {
+.recent-article .secondary-recent-article .article-img {
   margin-bottom: 1em;
 }
 
-.secondary-recent-article .article-date {
+.recent-article .secondary-recent-article .article-date {
   text-align: right;
 }
 
+.about-me,
+.recent-posts {
+  border: 20px solid #ebebeb;
+  margin-bottom: 100px;
+}
+
 @media (max-width: 675px) {
-  .flex-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   .navlinks {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

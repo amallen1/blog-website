@@ -38,6 +38,7 @@ a {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 // -- Typography styling
@@ -73,8 +74,9 @@ h1 {
   letter-spacing: 0.1em;
 }
 
-.article-date {
-  font-size: .875rem;
+.article-date,
+.article-link {
+  font-size: 0.875rem;
 }
 
 .article-body {
@@ -99,8 +101,24 @@ h1 {
 
 .flex-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+}
+
+// -- media query
+
+@media (min-width: 675px) {
+  .flex-container {
+    flex-direction: row;
+  }
+
+  main {
+    width: 75%;
+  }
+
+  aside {
+    width: 20%;
+  }
 }
 
 // -- Navigation links
@@ -127,6 +145,8 @@ h1 {
   border-bottom: 1px solid $navlinks-clr;
 }
 
+/* ARTICLE SECTION */
+
 //-- Featured article
 
 .featured-article {
@@ -145,7 +165,7 @@ h1 {
   }
 
   .article-title {
-    margin-bottom: .75em;
+    margin-bottom: 0.75em;
   }
 
   .article-link {
@@ -157,40 +177,37 @@ h1 {
 .recent-article {
   display: flex;
   flex-direction: column;
+  margin-bottom: 3em;
+
+  .main-recent-article {
+    order: -2;
+    //margin-top: -1.5em;
+
+    .article-body {
+      margin: 1.5em 0;
+    }
+  }
+
+  .secondary-recent-article {
+    order: -3;
+
+    .article-img {
+      margin-bottom: 1em;
+    }
+    .article-date {
+      text-align: right;
+    }
+  }
 }
 
-.main-recent-article {
-  order: -2;
-  //margin-top: -1.5em;
-
-  .article-body {
-    margin: 1.5em 0;
-  }
-
-  .article-link {
-    display: inline-block;
-    margin-bottom: 4.5em;
-  }
-}
-
-.secondary-recent-article {
-  order: -3;
-
-  .article-img {
-    margin-bottom: 1em;
-  }
-  .article-date {
-    text-align: right;
-  }
-
-
+//sidepanel
+.about-me,
+.recent-posts {
+  border: 20px solid $sidepanel-clr;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 675px) {
-  .flex-container {
-    flex-direction: column;
-  }
-
   .navlinks {
     flex-direction: column;
 
