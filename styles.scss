@@ -49,6 +49,15 @@ h1 {
   font-weight: 400;
 }
 
+h2 {
+  color: $heading-clr;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1625em;
+  line-height: 1.5;
+}
+
 .logo {
   margin-bottom: 1em;
 
@@ -91,6 +100,10 @@ h1 {
   font-weight: 700;
 }
 
+.abt-msg {
+  color: $heading-clr;
+}
+
 // -- Layout
 
 .container {
@@ -105,7 +118,7 @@ h1 {
   justify-content: space-between;
 }
 
-// -- media query
+// -- Desktop media query
 
 @media (min-width: 675px) {
   .flex-container {
@@ -212,13 +225,7 @@ h1 {
   }
 }
 
-// -- sidepanel
-.about-me,
-.recent-posts {
-  border: 20px solid $sidepanel-clr;
-  padding: 1em;
-  margin-bottom: 100px;
-}
+// -- Media query for articles
 
 @media (min-width: 675px) {
   .recent-article {
@@ -244,6 +251,75 @@ h1 {
   article {
     &:last-child .article-img {
       object-position: left;
+    }
+  }
+}
+
+/* SIDEPANEL */
+
+.about-me,
+.recent-posts {
+  border: 20px solid $sidepanel-clr;
+  margin-bottom: 100px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  padding: 4em 1.5em 1.5em 1.5em;
+
+  .abt-heading {
+    display: none;
+  }
+
+  p {
+    order: -1;
+  }
+  .abt-img {
+    order: -2;
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+  }
+}
+
+.recent-posts {
+  padding: 1.5em 1.5em 1em 1.5em;
+
+  .recent-post-heading {
+    margin-bottom: 1em;
+  }
+}
+
+.side-article {
+  display: flex;
+  flex-direction: column;
+
+  .side-img {
+    order: -1;
+    height: 87px;
+    object-fit: cover;
+  }
+}
+
+//selects the second img and repositions it
+.recent-posts > div:nth-child(3) {
+  .side-img {
+    object-position: 50% 85%;
+  }
+}
+
+@media (min-width: 675px) {
+  .about-me {
+    .abt-heading {
+      order: -2;
+    }
+
+    .abt-img {
+      order: -1;
+      object-fit: cover;
+      height: 133px;
     }
   }
 }
