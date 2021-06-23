@@ -2,6 +2,8 @@
 
 This is my solution to a design made by the Scrimba team that is used in their Responsive Web Design Bootcamp [https://scrimba.com/learn/responsive].
 
+Design files: https://xd.adobe.com/spec/75d448ea-569a-4b7e-721b-9bbd3b2b97b9-03e5/screen/c27ed1eb-3c57-41a8-acb2-90ecaf25f93b/specs/ 
+
 ## Table of contents
 
 - [Overview](#overview)
