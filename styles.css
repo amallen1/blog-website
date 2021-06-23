@@ -37,9 +37,6 @@ h2 {
   color: #143774;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1625em;
-  line-height: 1.5;
 }
 
 h3 {
@@ -47,8 +44,6 @@ h3 {
   color: #143774;
   font-family: "Lora", serif;
   font-size: 1.125em;
-  border-bottom: 1px solid #70707093;
-  padding-bottom: 1em;
 }
 
 .logo {
@@ -93,10 +88,28 @@ h3 {
   font-weight: 700;
 }
 
+.abt-heading,
+.recent-post-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.1625em;
+  line-height: 1.5;
+}
+
 .abt-msg {
   color: #143774;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2;
+}
+
+.main-heading {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.main-subheading {
+  color: #1792d2;
+  font-size: 1.125rem;
 }
 
 .container {
@@ -333,6 +346,11 @@ h3 {
   margin-bottom: 0.5em;
 }
 
+.side-article .side-title {
+  border-bottom: 1px solid #70707093;
+  padding-bottom: 1em;
+}
+
 .recent-posts > div:last-child .side-title {
   border: none;
   padding-bottom: 0;
@@ -365,6 +383,27 @@ h3 {
   .about-me .abt-msg {
     margin-bottom: 1em;
   }
+}
+
+/*ABOUT ME PAGE*/
+main .main-img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .main-heading {
+  margin: 2em 0 .5em 0;
+}
+
+main p {
+  line-height: 1.5;
+  margin: 1em 0;
+}
+
+.main > p:last-child {
+  margin-bottom: 6em;
 }
 
 /*FOOTER section*/

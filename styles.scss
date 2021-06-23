@@ -53,9 +53,6 @@ h2 {
   color: $heading-clr;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1625em;
-  line-height: 1.5;
 }
 
 h3 {
@@ -63,8 +60,6 @@ h3 {
   color: $heading-clr;
   font-family: "Lora", serif;
   font-size: 1.125em;
-  border-bottom: 1px solid #70707093;
-  padding-bottom: 1em;
 }
 
 .logo {
@@ -109,10 +104,28 @@ h3 {
   font-weight: 700;
 }
 
+.abt-heading,
+.recent-post-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.1625em;
+  line-height: 1.5;
+}
+
 .abt-msg {
   color: $heading-clr;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 2;
+}
+
+.main-heading {
+  font-family: 'Lora', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.main-subheading {
+  color: $subheading-clr;
+  font-size: 1.125rem;
 }
 
 // -- Layout
@@ -132,15 +145,14 @@ h3 {
 // -- Desktop media query
 
 @media (min-width: 675px) {
-
   header {
     .flex-container {
       align-items: center;
-    } 
+    }
   }
-  
+
   .flex-container {
-    flex-direction: row; 
+    flex-direction: row;
   }
 
   main {
@@ -157,7 +169,6 @@ h3 {
   list-style: none;
   display: flex;
   justify-content: center;
-  
 
   li {
     margin: 0 1em;
@@ -318,6 +329,11 @@ h3 {
     object-fit: cover;
     margin-bottom: 0.5em;
   }
+
+  .side-title {
+    border-bottom: 1px solid #70707093;
+    padding-bottom: 1em;
+  }
 }
 
 //removes bottom border from side-title
@@ -354,9 +370,29 @@ h3 {
     .abt-msg {
       margin-bottom: 1em;
     }
-
-  
   }
+}
+
+/*ABOUT ME PAGE*/
+main {
+  .main-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .main-heading {
+    margin: 2em 0 .5em 0;
+  }
+
+  p {
+    line-height: 1.5;
+    margin: 1em 0;
+  }
+}
+
+.main > p:last-child {
+  margin-bottom: 6em;
 }
 
 /*FOOTER section*/
